@@ -1,5 +1,5 @@
-## File: docker-compose.05.web-auth-traefik-portainer.yml
-##   from https://github.com/DigitalGrinnell/web-auth-traefik-portainer
+## File: docker-compose.web-auth-traefik-portainer.yml
+##   from https://github.com/DigitalGrinnell/05_web_auth_traefik_portainer
 ## Created 2019-Mar-31
 ## M. McFate - Grinnell College Libraries
 
