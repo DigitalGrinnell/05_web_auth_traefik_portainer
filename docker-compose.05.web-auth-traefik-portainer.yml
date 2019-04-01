@@ -1,0 +1,17 @@
+## File: docker-compose.05.web-auth-traefik-portainer.yml
+##   from https://github.com/DigitalGrinnell/web-auth-traefik-portainer
+## Created 2019-Mar-31
+## M. McFate - Grinnell College Libraries
+
+## To learn more about YAML syntax see
+##   https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+##   or https://github.com/Animosity/CraftIRC/wiki/Complete-idiot%27s-introduction-to-yaml.
+
+## The following `version` and `services` keys must exist here, and the 'version' key:value pair must match the corresponding pair used in your `docker-compose.yml` file.
+version: '3'
+services:
+  isle-portainer:
+    command: --admin-password $$2y$$05$$JEFVfb8jNSBchvoNcZ.qoufys6AExBEvWMa/E38RGGWAnxkTmVZZa -H unix:///var/run/docker.sock
+  traefik:
+    labels:
+      - "traefik.frontend.auth.basic=islandora:$$apr1$$aTbvuG3k$$4wlb3Zj0.x2Lshn/FwfWV0"
